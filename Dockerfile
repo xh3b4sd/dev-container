@@ -12,8 +12,8 @@ RUN apt-get -y install git openssh-server curl wget ack-grep ncurses-term vim
 
 # setup ssh
 RUN mkdir /var/run/sshd
-RUN mkdir -p /root/.ssh
-RUN touch /root/.ssh/authorized_keys
+RUN mkdir -p /.ssh
+RUN touch /.ssh/authorized_keys
 ADD ./sshd_config /etc/ssh/sshd_config
 
 # fix locale
