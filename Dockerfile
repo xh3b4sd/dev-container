@@ -8,7 +8,7 @@ MAINTAINER Tim Schindler <tim@catalyst-zero.com>
 
 # update system
 RUN apt-get update
-RUN apt-get install git openssh-server curl wget ack-grep
+RUN apt-get -y install git openssh-server curl wget ack-grep
 
 # setup ssh
 RUN mkdir /var/run/sshd
