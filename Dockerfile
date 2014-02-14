@@ -15,9 +15,3 @@ RUN mkdir /var/run/sshd
 RUN mkdir -p /.ssh
 RUN touch /.ssh/authorized_keys
 ADD ./sshd_config /etc/ssh/sshd_config
-
-# expose container port
-EXPOSE 22
-
-# run the service
-CMD ["/usr/sbin/sshd", "-D"]
