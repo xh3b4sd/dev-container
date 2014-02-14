@@ -17,12 +17,17 @@ Commit the container changes to the docker image.
 docker commit <container id> zyndiecate/dev-container
 ```
 
+Tag a project container.
+```bash
+docker tag <image id> zyndiecate/dev-container-project1
+```
+
 Run the dev container as ssh service.
 ```bash
-docker run -d -p 22 zyndiecate/dev-container /usr/sbin/sshd -D
+docker run -d -p 22 zyndiecate/dev-container-project1 /usr/sbin/sshd -D
 ```
 
 Connect to the container and hack.
 ```bash
-ssh root@localhost -p <container port>
+ssh root@localhost -p <container port> -A
 ```
