@@ -8,7 +8,7 @@ MAINTAINER Tim Schindler <tim@catalyst-zero.com>
 
 # update system
 RUN apt-get update
-RUN apt-get -y install git openssh-server curl wget ack-grep ncurses-term vim build-essential bash-completion
+RUN apt-get -y install bash-completion git openssh-server curl wget ack-grep ncurses-term vim build-essential
 
 # setup ssh
 RUN mkdir /var/run/sshd
